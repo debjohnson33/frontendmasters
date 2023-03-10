@@ -1,19 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title></title>
+		<title>Email Starter</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<style type="text/css">
-			
-			
+			/* Prevent WebKit and Windows mobile changing default text sizes */
+			body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+			table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+			img { -ms-interpolation-mode: bicubic; }
 
+			/* Remove spacing between tables and other design styles in Outlook 2007 and up */
+			img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+			table { border-collapse: collapse !important; }
+			body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+			/* iOS blue links */
+			a[x-apple-data-detectors] {
+				color: inherit !important;
+				text-decoration: none !important;
+				font-size: inherit !important;
+				font-family: inherit !important;
+				font-weight: inherit !important;
+				line-height: inherit !important;
+			}
+
+			/* Gmail blue links */
+			u + #body a {
+				color: inherit;
+				text-decoration: none;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+			}
+
+			/* Samsung Mail blue links */
+			#MessageViewBody a {
+				color: inherit;
+				text-decoration: none;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+			}
+
+			table {
+
+				margin: 36px auto;
+			}
+			.header-text {
+				text-align: center;
+				font-family: Arial, sans-serif;
+				color: #3b0b89;
+			}
+			.standart-text {
+				font-size: 18px;
+				line-height: 28px;
+				font-family: Arial, sans-serif;
+				font-weight: 300;
+				color: #6105f4;
+			}
 		</style>
 	</head>
 	<body id="body" style="margin: 0 !important; padding: 0 !important;">
+		<table>
+			<!-- Logo -->
+			<tr style="display: flex; padding: 36px;">
+				<td style="align-self: start;">
+					<img src="images/logo.jpg" alt="logo placeholder" width="100px" style="border-radius: 50%;">
+				</td>
+			</tr>
+			<!-- Header -->
+			<tr>
+				<td>
+					<h1 class="header-text">Email Starter</h1>
+				</td>
+			</tr>
+			<!-- Hero Image -->
+			<tr>
+				<td style="text-align: center;">
+					<img src="images/hero.jpg" alt="placeholder" width="600px" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%; border-radius: 24px;">
+				</td>
+			</tr>
+			<!-- Body -->
+			<tr>
+				<td>
+					<p class="standart-text">Here is a basic email template to get started.</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="600px">
+					<p class="standart-text">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam maxime sit corporis aliquid id ipsam magni quas omnis cupiditate quam labore eveniet quibusdam ut doloribus ducimus, vel rem illum.
+					</p>
+				</td>
+			</tr>
+			<!-- CTA Button -->
+			<tr>
+				<td>
+					<div style="text-align: center;"><!--[if mso]>
+						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://google.com" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" strokecolor="#731ab7" fillcolor="#731ab7">
+							<w:anchorlock/>
+							<center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">Register now</center>
+						</v:roundrect>
+					<![endif]--><a href="http://google.com"
+					style="background-color:#731ab7;border:1px solid #731ab7;border-radius:50px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Register now</a></div>
+				</td>
+			</tr>
+			<!-- Footer -->
+			<tr style="display: flex; padding-top: 36px;">
+				<td style="display: flex; align-self: flex-start;">
+					<p style="align-self: flex-start;"><a href="#">Unsubscribe</a></p>
+				</td>
+			</tr>
+			<tr style="display: flex;">
+				<td style="display: flex; align-self: flex-start;">
+					<p style="align-self: flex-start;" class="standart-text">111 Made Up Lane, Blue City, TX 11111</p>
+				</td>
+			</tr>
+		</table>
 
-		
 
 	</body>
 </html>
