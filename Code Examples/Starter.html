@@ -47,7 +47,6 @@
 			}
 
 			table {
-
 				margin: 36px auto;
 			}
 			.header-text {
@@ -62,66 +61,107 @@
 				font-weight: 300;
 				color: #6105f4;
 			}
+			/* Responsive styles */
+			@media screen and (max-width: 600px) {
+				.mobile {
+					width: 100% !important;
+				}
+				.block {
+					width: 100% !important;
+					display: block !important;
+				}
+			}
 		</style>
 	</head>
 	<body id="body" style="margin: 0 !important; padding: 0 !important;">
-		<table>
-			<!-- Logo -->
-			<tr style="display: flex; padding: 36px;">
-				<td style="align-self: start;">
-					<img src="images/logo.jpg" alt="logo placeholder" width="100px" style="border-radius: 50%;">
-				</td>
-			</tr>
-			<!-- Header -->
-			<tr>
-				<td>
-					<h1 class="header-text">Email Starter</h1>
-				</td>
-			</tr>
-			<!-- Hero Image -->
-			<tr>
-				<td style="text-align: center;">
-					<img src="images/hero.jpg" alt="placeholder" width="600px" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%; border-radius: 24px;">
-				</td>
-			</tr>
-			<!-- Body -->
-			<tr>
-				<td>
-					<p class="standart-text">Here is a basic email template to get started.</p>
-				</td>
-			</tr>
-			<tr>
-				<td width="600px">
-					<p class="standart-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam maxime sit corporis aliquid id ipsam magni quas omnis cupiditate quam labore eveniet quibusdam ut doloribus ducimus, vel rem illum.
-					</p>
-				</td>
-			</tr>
-			<!-- CTA Button -->
-			<tr>
-				<td>
-					<div style="text-align: center;"><!--[if mso]>
-						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://google.com" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" strokecolor="#731ab7" fillcolor="#731ab7">
-							<w:anchorlock/>
-							<center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">Register now</center>
-						</v:roundrect>
-					<![endif]--><a href="http://google.com"
-					style="background-color:#731ab7;border:1px solid #731ab7;border-radius:50px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Register now</a></div>
-				</td>
-			</tr>
-			<!-- Footer -->
-			<tr style="display: flex; padding-top: 36px;">
-				<td style="display: flex; align-self: flex-start;">
-					<p style="align-self: flex-start;"><a href="#">Unsubscribe</a></p>
-				</td>
-			</tr>
-			<tr style="display: flex;">
-				<td style="display: flex; align-self: flex-start;">
-					<p style="align-self: flex-start;" class="standart-text">111 Made Up Lane, Blue City, TX 11111</p>
-				</td>
-			</tr>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+
+
+			<table class="mobile" border="0" cellpadding="0" cellspacing="0" width="600" role="presentation" > <!-- Use presentation to avoid screen reader reading the table row, cell, etc. Focuses attention on the content -->
+				<!-- Logo -->
+				<tr>
+					<td>
+							<center>
+								<img src="https://picsum.photos/100/100" alt="logo placeholder" width="50px" style="border-radius: 50%; max-width: 50px; min-width: 50px; width: 100%;">
+							</center>
+						</td>
+					</tr>
+				<!-- Header -->
+				<tr>
+					<td>
+						<h1 class="header-text">Email Starter</h1>
+					</td>
+				</tr>
+				<!-- Hero Image -->
+				<tr>
+					<td style="text-align: center;">
+						<img src="https://picsum.photos/600/400" alt="placeholder" width="600px" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%; border-radius: 24px;">
+					</td>
+				</tr>
+				<!-- Body -->
+				<tr>
+					<td>
+						<p class="standart-text">Here is a basic email template to get started.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="margin: 10px auto;">
+							<tr>
+								<td>
+									<table class="block" align="left" border="0" cellpadding="0" cellspacing="0" width="48%" role="presentation" style="margin: 0;" >
+										<tr>
+											<td>
+												<h2 style="font-family: Arial,sans-serif; color: #3b0b89;">Column 1</h2>
+												<p class="standart-text" style="padding-right: 10px;">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam maxime sit corporis aliquid id ipsam magni quas omnis cupiditate quam labore eveniet quibusdam ut doloribus ducimus, vel rem illum.
+												</p>
+											</td>
+										</tr>
+									</table>
+									<table class="block" align="right" border="0" cellpadding="0" cellspacing="0" width="48%" role="presentation" style="margin: 0" >
+										<tr>
+											<td>
+												<h2 style="font-family: Arial,sans-serif; color: #3b0b89;">Column 2</h2>
+												<p class="standart-text" style="padding-right: 10px;">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias totam maxime sit corporis aliquid id ipsam magni quas omnis cupiditate quam labore eveniet quibusdam ut doloribus ducimus, vel rem illum.
+												</p>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+
+				<!-- CTA Button -->
+				<tr>
+					<td>
+						<div style="text-align: center;"><!--[if mso]>
+							<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://google.com" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" strokecolor="#731ab7" fillcolor="#731ab7">
+								<w:anchorlock/>
+								<center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">Register now</center>
+							</v:roundrect>
+						<![endif]--><a href="http://google.com"
+						style="background-color:#731ab7;border:1px solid #731ab7;border-radius:50px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Register now</a></div>
+					</td>
+				</tr>
+				<!-- Footer -->
+				<table border="0" cellpadding="0" cellspacing="0" width="600" role="presentation" bgcolor="#efefef">
+					<tr>
+						<td>
+							<p><a href="#">Unsubscribe</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="standart-text">111 Made Up Lane, Blue City, TX 11111</p>
+						</td>
+					</tr>
+				</table>
+			</table>
 		</table>
-
-
 	</body>
 </html>
