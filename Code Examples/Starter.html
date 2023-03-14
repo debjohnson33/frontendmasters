@@ -46,6 +46,38 @@
 				line-height: inherit;
 			}
 
+			a {
+				color: #6105f4;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #231e2b;
+				background-color: #c4a4f7;
+			}
+			.button {
+				background-color:#731ab7;
+				border:2px solid #731ab7;
+				border-radius:50px;
+				color:#ffffff;
+				display:inline-block;
+				font-family:sans-serif;
+				font-size:18px;
+				font-weight:bold;
+				line-height:40px;
+				text-align:center;
+				text-decoration:none;
+				width:200px;
+				-webkit-text-size-adjust:none;
+				mso-hide:all;
+				transition: all 0.2s ease;
+			}
+			a.button:hover {
+				color: #231e2b;
+				background-color: #c4a4f7;
+				box-shadow: 0px 12px 24px rgba(0,0,0,0.2);
+				transform: translateY(-10px);
+			}
+
 			table {
 				margin: 36px auto;
 			}
@@ -71,6 +103,58 @@
 					display: block !important;
 				}
 			}
+			/* CSS animations */
+			@keyframes fade-in {
+				from { opacity: 0; transform: scale(0.8); }
+				to { opacity: 1; transform: scale(1); }
+			}
+			.fade-in {
+				animation: 2s 1 fade-in;
+			}
+			/* Interactive styles */
+
+			/* Hide inputs */
+			input {
+				display: none;
+			}
+
+			/* Make labels look clickable */
+			label:hover {
+				cursor: pointer;
+				background-color: #c4a4f7;
+			}
+
+			/* Hide slides */
+			.slide {
+				display: none;
+				background-color: #eaeaea;
+				padding: 20px;
+			}
+
+			.slide-label {
+				border: 2px solid #000000;
+				display: inline-block;
+				margin: 10px;
+				padding: 4px 20px;
+			}
+
+			/* Show checked slide */
+			#slide1:checked ~ .slide1,
+			#slide2:checked ~ .slide2,
+			#slide3:checked ~ .slide3 {
+				display: block;
+			}
+
+			/* Make label border different when checked */
+			#slide1:checked ~ .slide-label1,
+			#slide2:checked ~ .slide-label2,
+			#slide3:checked ~ .slide-label3 {
+				background-color: #c4a4f7;
+				border: 4px solid blue !important;
+			}
+
+
+
 		</style>
 	</head>
 	<body id="body" style="margin: 0 !important; padding: 0 !important;">
@@ -95,7 +179,7 @@
 				<!-- Hero Image -->
 				<tr>
 					<td style="text-align: center;">
-						<img src="https://picsum.photos/600/400" alt="placeholder" width="600px" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%; border-radius: 24px;">
+						<img class="fade-in" src="https://picsum.photos/600/400" alt="placeholder" width="600px" border="0" style="display: block; max-width: 100%; min-width: 100px; width: 100%; border-radius: 24px;">
 					</td>
 				</tr>
 				<!-- Body -->
@@ -145,7 +229,7 @@
 								<center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">Register now</center>
 							</v:roundrect>
 						<![endif]--><a href="http://google.com"
-						style="background-color:#731ab7;border:1px solid #731ab7;border-radius:50px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Register now</a></div>
+						class="button">Register now</a></div>
 					</td>
 				</tr>
 				<!-- Footer -->
@@ -163,5 +247,34 @@
 				</table>
 			</table>
 		</table>
+
+		<!-- Put outside of table because this technique doesn't work inside tables -->
+		<div style="width: 600px; max-width: 600px; margin: 20px auto;">
+
+
+
+			<div style="margin-bottom: 20px; text-align: center;">
+				<input type="radio" name="slides" id="slide1" checked>
+				<label class="slide-label slide-label1" for="slide1">Slide 1</label>
+				<input type="radio" name="slides" id="slide2">
+				<label class="slide-label slide-label2" for="slide2">Slide 2</label>
+				<input type="radio" name="slides" id="slide3">
+				<label class="slide-label slide-label3" for="slide3">Slide 3</label>
+				<!-- Content to be switched -->
+				<div class="slide slide1" style="">
+					<h1>This is slide 1</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis quam voluptate sed iste, molestias officia recusandae aliquid eaque quis.</p>
+				</div>
+				<div class="slide slide2">
+					<h1>This is slide 2</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veritatis suscipit exercitationem animi? Explicabo.</p>
+				</div>
+				<div class="slide slide3">
+					<h1>This is slide 3</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ad delectus incidunt asperiores est quidem totam dicta exercitationem, quasi voluptates, dolores debitis mollitia.</p>
+				</div>
+			</div>
+
+		</div>
 	</body>
 </html>
